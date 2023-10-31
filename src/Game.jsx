@@ -1,5 +1,6 @@
 import Card from './Card';
 import './css/Game.css';
+
 export default function game({ characters }) {
   return (
     <main className="game">

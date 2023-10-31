@@ -8,6 +8,7 @@ const randomIds = Array.from(Array(12).keys()).map((e) => Math.floor(Math.random
 
 function App() {
   const [characters, setCharacters] = useState([]);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     const fetchCharacters = async () => {
@@ -19,8 +20,8 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Game characters={characters} />
+      <Header score={score} />
+      <Game characters={characters} setScore={setScore} />
     </>
   );
 }

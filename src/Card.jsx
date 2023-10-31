@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './css/Card.css';
 
 export default function Card({ name, img }) {
