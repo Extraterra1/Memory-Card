@@ -5,7 +5,7 @@ import Card from './Card';
 import Toast from './helpers/Toast';
 import './css/Game.css';
 
-export default function Game({ characters, setScore, score }) {
+export default function Game({ characters, setScore, score, setGamesPlayed }) {
   const [clicked, setClicked] = useState([]);
   const handleClick = (id) => {
     if (clicked.includes(id)) {
@@ -20,6 +20,7 @@ export default function Game({ characters, setScore, score }) {
       }).then((result) => {
         setScore(0);
         setClicked([]);
+        setGamesPlayed((num) => num + 1);
       });
     } else {
       setScore((score) => score + 1);
