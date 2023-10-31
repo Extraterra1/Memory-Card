@@ -1,21 +1,12 @@
 import Card from './Card';
 import './css/Game.css';
-export default function game() {
+export default function game({ characters }) {
   return (
     <main className="game">
       <div className="game-container">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {characters.map((e) => {
+          return <Card key={e.id} name={e.name} img={e.image} />;
+        })}
       </div>
     </main>
   );

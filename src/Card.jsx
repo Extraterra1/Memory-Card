@@ -1,13 +1,13 @@
 import './css/Card.css';
 
-export default function Card() {
+export default function Card({ name, img }) {
   return (
     <div className="card">
       <div className="card-image">
-        <img src="https://rickandmortyapi.com/api/character/avatar/826.jpeg" alt="" />
+        <img src={img} alt="" />
       </div>
       <div className="card-title">
-        <h2>Pikachu</h2>
+        <h2>{name}</h2>
       </div>
     </div>
   );
