@@ -1,3 +1,13 @@
 .game {
   flex-grow: 1;
+  display: grid;
+  place-items: center;
+}
+
+.game-container {
+  display: grid;
+  max-width: 50%;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 2rem;
 }
