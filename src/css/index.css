@@ -26,3 +26,15 @@ body {
   flex-direction: column;
   flex-grow: 1;
 }
+
+@media screen and (max-width: 1300px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 6px;
+  }
+}

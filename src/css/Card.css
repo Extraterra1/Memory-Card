@@ -43,3 +43,9 @@
 .card {
   animation: scale-up-center 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 1300px) {
+  .card-title {
+    padding: 1rem 0;
+  }
+}
