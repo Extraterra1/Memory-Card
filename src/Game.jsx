@@ -1,10 +1,22 @@
+import Card from './Card';
 import './css/Game.css';
-
 export default function game() {
   return (
     <main className="game">
-      <h1>xd</h1>
-      <div className="game-container" />
+      <div className="game-container">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </main>
   );
 }
