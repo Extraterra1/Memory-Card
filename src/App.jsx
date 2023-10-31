@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Header score={score} />
-      <Game characters={characters} setScore={setScore} />
+      <Game characters={characters} setScore={setScore} score={score} />
     </>
   );
 }

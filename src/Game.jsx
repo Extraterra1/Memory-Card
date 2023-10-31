@@ -1,20 +1,30 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 import Card from './Card';
+import Toast from './helpers/Toast';
 import './css/Game.css';
 
-export default function Game({ characters, setScore }) {
+export default function Game({ characters, setScore, score }) {
   const [clicked, setClicked] = useState([]);
   const handleClick = (id) => {
     if (clicked.includes(id)) {
       setClicked([]);
       setScore(0);
-    } else {
-      setClicked([...clicked, id]);
+      Toast({ title: 'Wrong! Resetting board...' });
+    } else if (score === 11) {
       setScore((score) => score + 1);
+      Swal.fire({
+        title: 'You won! Max score reached',
+        confirmButtonText: 'Start Over'
+      }).then((result) => {
+        setScore(0);
+        setClicked([]);
+      });
+    } else {
+      setScore((score) => score + 1);
+      setClicked([...clicked, id]);
     }
-
-    console.log(id);
   };
 
   return (
