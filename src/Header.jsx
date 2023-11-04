@@ -17,6 +17,9 @@ export default function Header({ score }) {
         <span>
           <Icon icon="ion:logo-youtube" />
         </span>
+        <span>
+          <Icon icon="ion:logo-instagram" />
+        </span>
       </div>
     </nav>
   );
